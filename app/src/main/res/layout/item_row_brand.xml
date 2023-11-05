@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="4dp"
+    android:background="@color/cadet_grey"
+    card_view:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cadet_grey"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/img_item"
+            android:layout_width="110dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_brand_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/brand_name"
+            android:textAppearance="@style/TitleMedium.Bold"
+            android:textColor="@color/prussian_blue"
+            android:textSize="16sp"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/img_item"
+            card_view:layout_constraintTop_toTopOf="@+id/img_item" />
+
+        <TextView
+            android:id="@+id/tv_brand_history"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:text="@string/brand_history"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+            android:textColor="@color/prussian_blue"
+            android:textSize="14sp"
+            card_view:layout_constraintBottom_toBottomOf="@+id/img_item"
+            card_view:layout_constraintEnd_toEndOf="@+id/tv_brand_name"
+            card_view:layout_constraintStart_toEndOf="@+id/img_item"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_brand_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
